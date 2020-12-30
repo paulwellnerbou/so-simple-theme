@@ -9,6 +9,15 @@
   max-width: $main-sidebar-max-width;
 }
 
+.layout--post .page-wrapper {
+  margin-top: -15%;
+  z-index: 1;
+}
+
+.layout--home .page-wrapper {
+  padding-top: 1px;
+}
+
 .page-title {
   @include fluid-type($min-vw, $max-vw, 48px, 60px);
   margin-bottom: 0.5em;
@@ -23,7 +32,7 @@
   text-align: center;
   margin-top: (-1 * $site-logo-height) / 2;
   margin-bottom: 2em;
-  z-index: 1;
+  z-index: -1;
 
   @include breakpoint($medium) {
     margin-top: (-1.5 * $site-logo-height) / 2;
@@ -232,9 +241,17 @@
   }
 
   .page-header {
+    z-index: 2;
     @include breakpoint($large) {
       grid-column: 1 / -1;
       clear: both; // needed for floated layout
+    }
+    h1 {
+      padding-top: .5em;
+      padding-left: .5em;
+      padding-right: .5em;
+      padding-bottom: .5em;
+      margin-bottom: 0;
     }
   }
 

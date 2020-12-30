@@ -8,6 +8,21 @@ body {
   border-top-color: $nav-background-color;
 }
 
+.page-wrapper {
+  background-image: linear-gradient(rgba(mix($background-color, $accent-color, 95%), 0.7), $background-color);
+  border-left: 1px solid rgba($base-color, .2);
+  border-right: 1px solid rgba($base-color, .2);
+  border-image:
+    linear-gradient(
+        to bottom,
+        #00000000,
+        rgba($base-color, .2) 10%,
+        rgba(0, 0, 0, 0)
+    ) 1 50%;
+  backdrop-filter: blur(5px);
+  border-radius: .4em;
+}
+
 a {
   color: $accent-color;
 
